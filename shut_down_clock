@@ -1,0 +1,23 @@
+import time
+import os
+
+os.system('cls')
+
+print("Countdown shutter in???")
+hour = int(input("Hours?  "))
+min = int(input("Min?  "))
+sec = int(input("sec?  "))
+
+
+hs = hour*60*60
+ms = min*60
+ss = sec
+dro = hs + ms + ss
+
+
+while dro > 0:
+    print(f"BLAST OFF IN {dro} !!!", end="\r")
+    dro -= 1
+    time.sleep(1)
+
+os.system("shutdown /s /t 1")
